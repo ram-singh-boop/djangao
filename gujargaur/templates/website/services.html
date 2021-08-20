@@ -1,0 +1,147 @@
+
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <!-- inner banner -->
+    <section class="w3l-inner-banner-main">
+        <div class="about-inner inner2">
+            <div class="wrapper seen-w3">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="{%url 'website-home' %}">Home</a></li>
+                    <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+                    <li class="active">Services</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+  
+    <!-- services 1-->
+    <section class="w3l-services-1" id="services">
+        <div class="services1 sec-padding">
+            <div class="wrapper">
+                <h3 class="title-main">Our Services</h3>
+                <div class="services1-content">
+                    <div class="column">
+                        <a href="single.html">
+                            <img src="{% static 'website/images/service1.jpg' %} " alt="" class="img-fluid img-responsive" />
+                            <div class="service-info">
+                                <h4 class="course">Counseling</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, mollitia!</p>
+                                <a href="#" class="feature-link">Read more <span
+                                        class="arrow">&raquo;</span></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="single.html">
+                            <img src="{% static 'website/images/service2.jpg' %} " alt="" class="img-fluid img-responsive" />
+                            <div class="service-info">
+                                <h4 class="course">24/7 Support</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, mollitia!</p>
+                                <a href="#" class="feature-link">Read more <span
+                                        class="arrow">&raquo;</span></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="single.html">
+                            <img src="{% static 'website/images/service3.jpg' %} " alt="" class="img-fluid img-responsive" />
+                            <div class="service-info">
+                                <h4 class="course">Youth Service</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, mollitia!</p>
+                                <a href="#" class="feature-link">Read more <span
+                                        class="arrow">&raquo;</span></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="single.html">
+                            <img src="{% static 'website/images/service4.jpg' %} " alt="" class="img-fluid img-responsive" />
+                            <div class="service-info">
+                                <h4 class="course">Family Service</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, mollitia!</p>
+                                <a href="#" class="feature-link">Read more <span
+                                        class="arrow">&raquo;</span></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="single.html">
+                            <img src="{% static 'website/images/service5.jpg' %}" alt="" class="img-fluid img-responsive" />
+                            <div class="service-info">
+                                <h4 class="course">Legal Assistance</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, mollitia!</p>
+                                <a href="#" class="feature-link">Read more <span
+                                        class="arrow">&raquo;</span></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="single.html">
+                            <img src="{% static 'website/images/service6.jpg' %}" alt="" class="img-fluid img-responsive" />
+                            <div class="service-info">
+                                <h4 class="course">Senior Citizen</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, mollitia!</p>
+                                <a href="#" class="feature-link">Read more <span
+                                        class="arrow">&raquo;</span></a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //services 1 -->
+  
+    <div class="w3l-counter-top-6">
+        <!-- counter-6-inf block -->
+        <section id="counter-6-inf-block" class="counter-main">
+            <div class="wrapper-full-gd">
+                <div class="d-grid align-counter-6-inf-cols">
+                    <div class="counter-6-inf-right">
+                        <div class="d-grid grid-col-2">
+                            <div class="specification">
+                                <div class="icon-bg">
+                                    <span class="fa fa-coffee"></span>
+                                </div>
+                                <h6>Lorem ipsum dolor</h6>
+                                <p>Lorem ante ipsum primis in faucibus orci luctus eted ultrices posuere.</p>
+                            </div>
+                            <div class="specification">
+                                <div class="icon-bg">
+                                    <span class="fa fa-users"></span>
+                                </div>
+                                <h6>Conse ctetur adis</h6>
+                                <p>Lorem ante ipsum primis in faucibus orci luctus eted ultrices posuere.</p>
+                            </div>
+                            <div class="specification spec-gap">
+                                <div class="icon-bg">
+                                    <span class="fa fa-magic"></span>
+                                </div>
+                                <h6>Susp endise volu</h6>
+                                <p>Lorem ante ipsum primis in faucibus orci luctus eted ultrices posuere.</p>
+                            </div>
+                            <div class="specification spec-gap">
+                                <div class="icon-bg">
+                                    <span class="fa fa-thumbs-o-up"></span>
+                                </div>
+                                <h6>Massa ac met</h6>
+                                <p>Lorem ante ipsum primis in faucibus orci luctus eted ultrices posuere.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="counter-6-inf-left second">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+  
+    {% endblock %}
+
+
+
+

@@ -1,0 +1,40 @@
+
+  {% extends 'website/base.html' %}
+  {% load static %}
+  {% block content %}
+
+
+
+    <!-- forms23 block -->
+    <section class="w3l-forms-23">
+        <div class="forms23-block">
+            <div class="wrapper">
+                <h1>
+                    <a href="{%url 'website-home' %}" class="logo-2 logo-3"><span class="fa fa-angellist"
+                            aria-hidden="true"></span>Unity</a>
+                  
+                </h1>
+                <div class="d-grid forms23-grids">
+                    <div class="form23">
+                        <img src="{% static 'website/images/testi2.jpg' %}" alt="" class="img-responsive">
+                        <h6>John Doe</h6>
+                        <form action="#" method="post">
+                            <input type="email" name="email" class="input-form" placeholder="Your Email"
+                                required="required" />
+                            <input type="password" name="password" class="input-form" placeholder="Your Password"
+                                required="required" />
+                            <button type="submit" class="btn button-eff">Login</button>
+                        </form>
+                        <p>Not a member yet? <a href="signup.html">Join Now!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //forms23 block -->
+
+    {% endblock %}
+
+
+
+

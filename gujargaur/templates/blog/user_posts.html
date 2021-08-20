@@ -1,0 +1,134 @@
+{% extends "website/base.html" %}
+ {% load static %}
+{% block content %}
+
+
+
+<!-- inner banner -->
+  <section class="w3l-inner-banner-main">
+    <div class="about-inner inner2">
+      <div class="wrapper seen-w3">
+        <ul class="breadcrumbs-custom-path">
+          <li><a href="{% url 'website-home' %}">Home</a></li>
+          <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+          <li class="active">Blog Page</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- //inner banner -->
+
+  <section class="w3l-blog-single">
+    <div class="single blog sec-padding">
+      <div class="wrapper">
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <h1 class="mb-3">Posts by - {{ view.kwargs.username }} | ({{ page_obj.paginator.count }})</h1>
+                <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{% url 'post-create' %}">Add New Post</a></button>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-3">
+                    {% for post in posts %}
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="thumbnail" src="{{ post.author.profile.image.url }}">
+
+                            <div class="card-body">
+                                <h3><a href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h3>
+                                <p class="card-text">T{{ post.content }}</p>
+                                <a href="{% url 'user-posts' post.author.username %}">Author: {{ post.author }}</a>
+                                <h6>Posted On: {{ post.date_posted }}</h6>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                      <button type="button" class="btn btn-sm btn-outline-info"><a href="{% url 'post-detail' post.id %}">View</a></button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div><br>
+                {% if is_paginated %}
+                    {% if page_obj.has_previous %}
+                        <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+                        <a class="btn btn-outline-info mb-4" href="?page={{page_obj.previous_page_number}}">Previous</a>
+                    {% endif %}
+
+                    {% for num in page_obj.paginator.page_range %}
+                        {% if page_obj.number == num %}
+                            <a class="btn btn-outline-info mb-4" href="?page={{num}}">{{num}}</a>
+                        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                            <a class="btn btn-outline-info mb-4" href="?page={{num}}">{{num}}</a>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if page_obj.has_next %}
+                        <a class="btn btn-outline-info mb-4" href="?page={{page_obj.next_page_number}}">Next</a>
+                        <a class="btn btn-outline-info mb-4" href="?page={{page_obj.paginator.num_pages}}">last</a>
+                    {% endif %}
+                {% endif %}
+            </div>
+          </div>
+
+
+      </div>   </div>   </section>
+
+<div class="clear">
+
+<style>
+.card.shadow-sm {
+    width: 50%;
+    float: left;
+}
+.clear {
+    clear: both;
+}
+
+.btn.btn-sm.btn-outline-secondary {
+    background: #ff4c4c;
+    border: navajowhite;
+       margin-bottom: 11px;
+       padding: 10px;
+}
+
+.btn.btn-sm.btn-outline-secondary a {
+    color: #fff;
+
+}
+
+.w3l-blog-single .card-body, .w3l-blog-single .floods-text {
+    padding: 0;
+}
+
+.w3l-blog-single .card {
+
+    border: none;
+}
+.card-body h3 {
+    margin: 7px 0;
+}
+.card.shadow-sm {
+    width: 48%;
+    float: left;
+    margin: 10px;
+}
+.d-flex.justify-content-between.align-items-center {
+    margin-top: 9px;
+}
+.btn.btn-sm.btn-outline-info {
+    background: #ff4c4c;
+    border: none;
+    margin-right: 10px;
+}
+.btn.btn-sm.btn-outline-info a {
+    color: #fff;
+}
+
+.text-muted {
+    font-size: 18px;
+}
+
+</style>
+
+
+{% endblock %}

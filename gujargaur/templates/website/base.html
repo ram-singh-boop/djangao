@@ -1,0 +1,327 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shri Gurjar Gaur Brahmin</title>
+    <link rel="stylesheet" content-type="text/css" href="{% static 'website/css/style-freedom.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+          box-sizing: border-box;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        }
+        
+        #w3lDemoBar.w3l-demo-bar {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 9999;
+          padding: 40px 5px;
+          padding-top:70px;
+          margin-bottom: 70px;
+          background: #0D1326;
+          border-top-left-radius: 9px;
+          border-bottom-left-radius: 9px;
+        }
+        
+        #w3lDemoBar.w3l-demo-bar a {
+          display: block;
+          color: #e6ebff;
+          text-decoration: none;
+          line-height: 24px;
+          opacity: .6;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+        
+        #w3lDemoBar.w3l-demo-bar span.w3l-icon {
+          display: block;
+        }
+        
+        #w3lDemoBar.w3l-demo-bar a:hover {
+          opacity: 1;
+        }
+        
+        #w3lDemoBar.w3l-demo-bar .w3l-icon svg {
+          color: #e6ebff;
+        }
+        #w3lDemoBar.w3l-demo-bar .responsive-icons {
+          margin-top: 30px;
+          border-top: 1px solid #41414d;
+          padding-top: 40px;
+        }
+        #w3lDemoBar.w3l-demo-bar .demo-btns {
+          border-top: 1px solid #41414d;
+          padding-top: 30px;
+        }
+        #w3lDemoBar.w3l-demo-bar .responsive-icons a span.fa {
+          font-size: 26px;
+        }
+        #w3lDemoBar.w3l-demo-bar .no-margin-bottom{
+          margin-bottom:0;
+        }
+        .toggle-right-sidebar span {
+          background: #0D1326;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          color: #e6ebff;
+          border-radius: 50px;
+          font-size: 26px;
+          cursor: pointer;
+          opacity: .5;
+        }
+        .pull-right {
+          float: right;
+          position: fixed;
+          right: 0px;
+          top: 70px;
+          width: 90px;
+          z-index: 99999;
+          text-align: center;
+        }
+        /* ============================================================
+        RIGHT SIDEBAR SECTION
+        ============================================================ */
+        
+        #right-sidebar {
+          width: 90px;
+          position: fixed;
+          height: 100%;
+          z-index: 1000;
+          right: 0px;
+          top: 0;
+          margin-top: 60px;
+          -webkit-transition: all .5s ease-in-out;
+          -moz-transition: all .5s ease-in-out;
+          -o-transition: all .5s ease-in-out;
+          transition: all .5s ease-in-out;
+          overflow-y: auto;
+        }
+        
+        /* ============================================================
+        RIGHT SIDEBAR TOGGLE SECTION
+        ============================================================ */
+        
+        .hide-right-bar-notifications {
+          margin-right: -300px !important;
+          -webkit-transition: all .3s ease-in-out;
+          -moz-transition: all .3s ease-in-out;
+          -o-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+        }
+        
+        
+        
+        @media (max-width: 992px) {
+          #w3lDemoBar.w3l-demo-bar a.desktop-mode{
+              display: none;
+        
+          }
+        }
+        @media (max-width: 767px) {
+          #w3lDemoBar.w3l-demo-bar a.tablet-mode{
+              display: none;
+        
+          }
+        }
+        @media (max-width: 568px) {
+          #w3lDemoBar.w3l-demo-bar a.mobile-mode{
+              display: none;
+          }
+          #w3lDemoBar.w3l-demo-bar .responsive-icons {
+              margin-top: 0px;
+              border-top: none;
+              padding-top: 0px;
+          }
+          #right-sidebar,.pull-right {
+              width: 90px;
+          }
+          #w3lDemoBar.w3l-demo-bar .no-margin-bottom-mobile{
+              margin-bottom: 0;
+          }
+        }
+        </style>
+
+
+</head>
+<body>
+
+
+    <div class="w3l-headers-9">
+        <header>
+            <div class="wrapper">
+                <div class="header">
+                    <div class="right-img-9">
+                        <a href="{%url 'website-home' %}" class="logo"><img src="{%static 'website/images/logo.png' %}">
+                            <span >श्री गुर्जर गौड़</span> </a>
+                       
+                    </div>
+                    <div class="bottom-menu-content">
+                        <input type="checkbox" id="nav" />
+                        <label for="nav" class="menu-bar"></label>
+                        <nav>
+                            <div class="wrapper">
+                                <ul class="menu">
+                                    {% for item in menus %}
+                                     <li>
+                                         <span class="{{ item.fa_icon }}"></span> <a href="{{ item.url }}" class="link-nav" > {{ item.title }}</a>
+                                     </li>
+                                    {% endfor %}
+
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <script src="{% static 'website/js/jquery-3.3.1.min.js' %}"></script>
+        <script>
+            $('#nav').change(function () {
+                if ($('#nav').is(":checked")) {
+                    $('body').css('overflow', 'hidden');
+                } else {
+                    $('body').css('overflow', 'auto');
+                }
+            });
+        </script>
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+
+        <!-- footer 14 -->
+        <div class="w3l-footer-main">
+            <div class="w3l-sub-footer-content">
+                <section class="_form-3">
+                    <div class="form-main">
+                        <div class="wrapper">
+                            <div class="middle-section grid-column top-bottom">
+                                <div class="image grid-three-column">
+                                    <img src="{% static 'website/images/subscribe.jpg' %}" alt="" class="img-fluid img-responsive">
+                                </div>
+                                <div class="text-grid grid-three-column">
+                                    <h2>Subscribe to receive our best posts once a month</h2>
+                                    <p>Sed lorem ipsum</p>
+                                </div>
+                                <div class="form-text grid-three-column">
+                                    <form action="" method="GET">
+                                        <input type="email" name=" placeholder" placeholder="Enter Your Email" required="">
+                                        <button type="submit" class="submit-butn btn button-eff">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            <!-- Footers-14 -->
+            <footer class="footer-14">
+                <div id="footers14-block">
+                    <div class="wrapper">
+                        <div class="footers20-content">
+                            <div class="d-grid grid-col-4 grids-content">
+                                <div class="column">
+                                    <h4>Our Address</h4>
+                                    <p> NH 58, Choti Basti, near New Bus Stand, Pushkar, Rajasthan 305022</p>
+                                </div>
+                                <div class="column">
+                                    <h4>Call Us</h4>
+                                    <p><a href="tel:0145 277 2112">0145 277 2112</a></p>
+                                </div>
+                                <div class="column">
+                                    <h4>Mail Us</h4>
+                                    <p><a href="mailto:info@example.com">info@example.com</a></p>
+                                </div>
+                                <div class="column">
+                                    <h4>Catch On</h4>
+                                    <ul>
+                                        <li><a href="#facebook"><span class="fa fa-facebook"
+                                                    aria-hidden="true"></span></a>
+                                        </li>
+                                        <li><a href="#linkedin"><span class="fa fa-linkedin"
+                                                    aria-hidden="true"></span></a>
+                                        </li>
+                                        <li><a href="#twitter"><span class="fa fa-twitter"
+                                                    aria-hidden="true"></span></a>
+                                        </li>
+                                        <li><a href="#google"><span class="fa fa-google-plus"
+                                                    aria-hidden="true"></span></a>
+                                        </li>
+                                        <li><a href="#github"><span class="fa fa-github" aria-hidden="true"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footers14-bottom d-flex">
+                            <div class="copyright">
+                                <p>© 2021 श्री गुर्जर गौड़ . All rights reserved. Design by <a href="{% url 'website-aboutus' %}"
+                                        target="_blank">Techoace.in</a></p>
+                            </div>
+                            <div class="language-select d-flex">
+                                <span class="fa fa-language" aria-hidden="true"></span>
+
+                <div id="google_translate_element"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- move top -->
+                <button onclick="topFunction()" id="movetop" title="Go to top">
+                    &uarr;
+                </button>
+
+
+
+                <script> 
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({
+                    pageLanguage: 'en'
+                  }, 'google_translate_element');
+                }
+                </script>
+                <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+
+                
+                <script>
+                    // When the user scrolls down 20px from the top of the document, show the button
+                    window.onscroll = function () {
+                        scrollFunction()
+                    };
+
+                    function scrollFunction() {
+                        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                            document.getElementById("movetop").style.display = "block";
+                        } else {
+                            document.getElementById("movetop").style.display = "none";
+                        }
+                    }
+
+                    // When the user clicks on the button, scroll to the top of the document
+                    function topFunction() {
+                        document.body.scrollTop = 0;
+                        document.documentElement.scrollTop = 0;
+                    }
+                </script>
+                <!-- /move top -->
+
+            </footer>
+            <!-- Footers-14 -->
+        </div>
+    </div>
+    <!-- //footer 14 -->
+
+
+
+</body>
+
+</html>

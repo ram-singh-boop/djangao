@@ -1,0 +1,277 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+    {{welcome_to_our}}
+    <!-- hero-header 11 -->
+    <section class="w3l-hero-headers-11">
+        <div class="hero-header-11">
+            <div class="hero-header-11-content">
+                <!-- banner -->
+                <div id="homepage-slider" class="st-slider">
+                    <input type="radio" class="cs_anchor radio" name="slider" id="play1" checked="" />
+                    <input type="radio" class="cs_anchor radio" name="slider" id="slide1" />
+                    <input type="radio" class="cs_anchor radio" name="slider" id="slide2" />
+                    <input type="radio" class="cs_anchor radio" name="slider" id="slide3" />
+                    <div class="images">
+                        <div class="images-inner">
+
+                             {% for item in homepage.silder_image %}
+                            <div class="image-slide">
+
+
+                                <div class="banner-w3ls-{{ forloop.counter }}">
+                                    <div class="wrapper">
+                                        <div class="slider-text-w3ls">
+                                            <span>{{item.subtitle}}</span>
+                                            <h4>{{item.title}}</h4>
+                                            <p>{{item.description}}</p>
+                                            <a href="{{item.url}}" class="btn button-eff button-eff-2"> Read More </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                         {% endfor %}
+
+                        </div>
+                    </div>
+                    <div class="labels">
+                        <div class="fake-radio">
+                            <label for="slide1" class="radio-btn"></label>
+                            <label for="slide2" class="radio-btn"></label>
+                            <label for="slide3" class="radio-btn"></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- //banner -->
+            </div>
+        </div>
+    </section>
+    <!-- //hero-header 11 -->
+    <div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+        <!---728x90--->
+
+    </div>
+    <!-- text-6 -->
+
+     <section class="w3l-text-6" id="about">
+        <div class="text-6-mian">
+            <div class="wrapper">
+                <div class="d-grid top-cont-grid">
+                    <div class="left-img">
+
+
+                            <img src="{{ homepage.welcome_to_our_image }}" alt="" class="img-fluid img-responsive" />
+
+
+                    </div>
+
+                    <div class="text-6-info">
+                        {% for item in homepage.welcome_to_our %}
+
+                         <h6>{{ item.subtitle }}</h6>
+                        <h2>{{ item.title }}  </h2>
+                        <p>{{ item.description }}</p>
+                        <a href="{{ item.url }}" class="btn button-eff"> Read More </a>
+
+
+                    {% endfor %}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- //text-6 -->
+    <!-- features -->
+    <section class="w3l-feature-9">
+        <div class="main-w3">
+            <div class="wrapper">
+                <div class="d-grid main-cont-wthree-fea">
+
+                    {% for item in homepage.service_content %}
+                    <div class="grids-feature">
+                        <div class="icon-bg">
+                            <span class="{{ item.fontaweomeicons_one }}" aria-hidden="true"></span>
+                        </div>
+                        <h4><a href="{% url 'website-aboutus' %}" class="title-head">{{ item.title }}</a></h4>
+                        <p>{{ item.description }}</p>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //features -->
+    <div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+        <!---728x90--->
+
+    </div>
+    <!-- team section -->
+    <section class="w3l-new-team-main" id="team">
+        <div class="sub-team sec-padding">
+            <div class="wrapper">
+                <h3 class="title-main">Our Team Members</h3>
+
+                <div class="d-grid main-sec">
+                    {% for item in homepage.team_members %}
+                    <div class="single-team">
+                        <a href="team-single.html">
+                            <img src="{{item.image.url}}" class="img-fluid img-responsive" alt="">
+                            <div class="team-hover">
+                                <h4>{{ item.title }}</h4>
+                                <a href="#facebook"><span class="fa fa-facebook"></span></a>
+                                <a href="#twitter"><span class="fa fa-twitter"></span></a>
+                                <a href="#linkedin"><span class="fa fa-linkedin"></span></a>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+
+                </div>
+                <div class="bottom-content-team">
+                     {% for item in homepage.team_members_decription %}
+                    <p class="para-index">{{item.description}}</p>
+                      {% endfor %}
+                    <a href="{{item.url}}" class="btn button-eff button-eff-2">View More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //team section -->
+    <!-- form-12 -->
+    <section class="w3l-form-12-main" id="help">
+        <div class="form-12-content">
+            <div class="wrapper">
+                <div class="grid-column-2">
+                    <div class="column1">
+                        <h5 class="form-para">Do You Need Help?</h5>
+                        <p class="tagline">Contact us and we help you to solve any of your problem.</p>
+                        <form action="" method="Get">
+                            <div class="">
+                                <input type="text" name="name" class="form-input" placeholder="Your Name" required />
+                            </div>
+                            <div class="">
+                                <input type="email" name="email" class="form-input" placeholder="Email Address"
+                                    required />
+                            </div>
+                            <div class="">
+                                <textarea name="message" class="form-input" placeholder="Your Massage.."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn button-eff">Send Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //form-12 -->
+    <div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+        <!---728x90--->
+
+    </div>
+    <!-- grids block 5 -->
+    <div class="w3l-grids-block-5" id="blog">
+        <section id="grids5-block">
+            <div class="wrapper">
+                <h3 class="title-main">Our Fresh Blog Posts</h3>
+                <div class="d-grid">
+
+
+                  {% for post in posts %}
+                    {% if forloop.counter < 4 %}
+                    <div class="grids5-info">
+                        <img src="{{ post.author.profile.image.url }}" alt=""
+                                class="img-fluid img-responsive" />
+                          <img class="img-fluid img-responsive" src="{% static 'website/images/gallery2.jpg' %}"
+                  alt="" />
+
+                        <div class="blog-info">
+                            <h4><a href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h4>
+
+                            <p>T{{ post.content }}</p>
+                            <a href="{% url 'user-posts' post.author.username %}">Author: {{ post.author }}</a>
+                            <br/>
+                            <small class="text-time">
+                <em>
+                  Posted On: &nbsp; <span class="fa fa-clock-o mr-2"></span>{{ post.date_posted }}</em>
+              </small>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                      <button type="button" class="btn btn-sm btn-outline-info"><a href="{% url 'post-detail' post.id %}">View</a></button>
+                                    </div>
+                                    &nbsp;<small class="text-muted">9 mins</small>
+                                </div>
+
+                            <ul class="blog-list">
+                                <li>
+                                    <p><span class="fa fa-calendar"></span> Sep 2019</p>
+                                </li>
+                                <li>
+                                    <p><span class="fa fa-heart"></span> <strong>20</strong> likes</p>
+                                </li>
+                                <li>
+                                    <p><span class="fa fa-comments-o"></span> <strong>2</strong> comments</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //grids block 5 -->
+<!-- app-4 -->
+
+
+   <section class="w3l-app-launch-4" id="app">
+        <div id="app4-block">
+            <div class="wrapper">
+                <div class="d-grid parent-flex">
+                    <div class="app4-right-image">
+                        <img src="{{ homepage.get_a_free_mobile_app_image }}" class="img-responsive" alt="App Device" />
+                    </div>
+                    <div class="app4-left-text">
+                        {% for item  in  homepage.get_a_free_mobile_app %}
+                        <h6>{{ item.subtitle }}</h6>
+                        <h4 class="hny-title">{{ item.title }} </h4>
+                        <p> {{ item.description }} </p>
+                           {% endfor %}
+                        <div class="app-4-connection">
+                            <div class="newsletter">
+                                <label>Enter email address to get download link</label>
+                                <form action="#" methos="GET" class="d-flex wrap-align">
+                                    <input type="email" placeholder="Enter email" required="required" />
+                                    <button type="submit">Get link</button>
+                                </form>
+                            </div>
+                            <div class="app-4-icon">
+                                <ul>
+                                    <li><a href="#url" title="Apple" class="app-icon apple-vv"><span class="fa fa-apple"
+                                                aria-hidden="true"></span></a></li>
+                                    <li><a href="#url" title="Google play" class="app-icon play-vv"><span
+                                                class="fa fa-play" aria-hidden="true"></span></a></li>
+                                    <li><a href="#url" title="Microsoft" class="app-icon windows-vv"><span
+                                                class="fa fa-windows" aria-hidden="true"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- //app-4 -->
+{% endblock %}      

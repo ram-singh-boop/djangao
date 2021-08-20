@@ -1,0 +1,76 @@
+
+
+  {% extends 'website/base.html' %}
+  {% load static %}
+  {% block content %}
+{{welcome_to_our}}
+    <!-- inner banner -->
+    <section class="w3l-inner-banner-main">
+        <div class="about-inner inner2">
+            <div class="wrapper seen-w3">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="index.html">Home</a></li>
+                    <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+                    <li class="active">Faq Page</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+    <div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+        <!---728x90--->
+
+    </div>
+    <!-- faq page -->
+    <section class="w3l-faq-content-main">
+        <div class="w3l-faq-content sec-padding">
+            <div class="wrapper">
+                <h3 class="title-main">Our Faq's Page</h3>
+                <div class="d-grid main-sec">
+                    <div class="right-faq">
+                         <img src="{{ faqspage.faqs_accordions_image }}" alt="" class="img-fluid img-responsive" />
+
+                    </div>
+                    <div class="faq-left">
+
+                      {% for item in faqspage.faqs_accordions %}
+                        <div class="faq-question">
+                            <input id="q{{ forloop.counter }}" type="checkbox" class="panel">
+                            <div class="plus">+</div>
+                            <label for="q{{ forloop.counter }}" class="panel-title">{{item.title}}</label>
+                            <div class="panel-content">{{item.description}}</div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+                <div class="faq-w3agile">
+                    <h3 class="w3-head">Top 10 Frequently asked questions</h3>
+
+                    <ul class="faq">
+
+
+                           {% for item in faqspage.faqs_quesrtions %}
+
+                         <li class="item1">
+
+                            <a href="#" title="click here">{{ item.title }}</a>
+                            <ul>
+                                <li class="subitem1">
+                                    <p> {{ item.description }}</p>
+                                </li>
+                            </ul>
+                        </li>
+
+                    {% endfor %}
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+  {% endblock %}
+

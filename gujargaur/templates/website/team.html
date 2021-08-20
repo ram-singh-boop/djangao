@@ -1,0 +1,95 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+    <section class="w3l-inner-banner-main">
+        <div class="about-inner inner2">
+            <div class="wrapper seen-w3">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="{%url 'website-home' %}">Home</a></li>
+                    <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+                    <li class="active">Teams page</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+  
+    <!-- team page -->
+    <section class="w3l-new-team-main">
+        <div class="sub-team sec-padding">
+            <div class="wrapper">
+                <h3 class="title-main">Our Team Members</h3>
+                <div class="d-grid main-sec">
+                    <div class="single-team">
+                        <a href="#">
+                            <img src="{% static 'website/images/team5.jpg' %}" class="img-fluid img-responsive" alt="">
+                            <div class="team-hover">
+                                <h4>Stew Ge</h4>
+                                <a href="#facebook"><span class="fa fa-facebook"></span></a>
+                                <a href="#twitter"><span class="fa fa-twitter"></span></a>
+                                <a href="#linkedin"><span class="fa fa-linkedin"></span></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="single-team">
+                        <a href="#">
+                            <img src="{%  static 'website/images/team6.jpg' %} " class="img-fluid img-responsive" alt="">
+                            <div class="team-hover">
+                                <h4>Al Dente</h4>
+                                <a href="#facebook"><span class="fa fa-facebook"></span></a>
+                                <a href="#twitter"><span class="fa fa-twitter"></span></a>
+                                <a href="#linkedin"><span class="fa fa-linkedin"></span></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="single-team">
+                        <a href="#">
+                            <img src="{% static 'website/images/team4.jpg' %}" class="img-fluid img-responsive" alt="">
+                            <div class="team-hover">
+                                <h4>Barry Cad</h4>
+                                <a href="#facebook"><span class="fa fa-facebook"></span></a>
+                                <a href="#twitter"><span class="fa fa-twitter"></span></a>
+                                <a href="#linkedin"><span class="fa fa-linkedin"></span></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="single-team">
+                        <a href="#">
+                            <img src="{% static  'website/images/team1.jpg' %} " class="img-fluid img-responsive" alt="">
+                            <div class="team-hover">
+                                <h4>Tara Mis</h4>
+                                <a href="#facebook"><span class="fa fa-facebook"></span></a>
+                                <a href="#twitter"><span class="fa fa-twitter"></span></a>
+                                <a href="#linkedin"><span class="fa fa-linkedin"></span></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="single-team">
+                        <a href="#">
+                            <img src="{% static 'website/images/team3.jpg' %}" class="img-fluid img-responsive" alt="">
+                            <div class="team-hover">
+                                <h4>Matt Inn</h4>
+                                <a href="#facebook"><span class="fa fa-facebook"></span></a>
+                                <a href="#twitter"><span class="fa fa-twitter"></span></a>
+                                <a href="#linkedin"><span class="fa fa-linkedin"></span></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="single-team">
+                        <a href="#">
+                            <img src="{% static 'website/images/team2.jpg' %} " class="img-fluid img-responsive" alt="">
+                            <div class="team-hover">
+                                <h4>john doe</h4>
+                                <a href="#facebook"><span class="fa fa-facebook"></span></a>
+                                <a href="#twitter"><span class="fa fa-twitter"></span></a>
+                                <a href="#linkedin"><span class="fa fa-linkedin"></span></a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% endblock %}

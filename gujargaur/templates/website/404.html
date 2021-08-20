@@ -1,0 +1,32 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="w3l-error-main">
+        <!-- error -->
+        <div class="error">
+            <div class="wrapper">
+                <h1>
+                    <a href="{% %}" class="logo-2"><span class="fa fa-angellist"
+                            aria-hidden="true"></span>Unity</a>
+                    <!-- if logo is image enable this   
+                    <a class="logo" href="index.html">
+                        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                    </a> -->
+                </h1>
+                <div id='error-page'>
+                    <div id='error-inner'>
+                        <h2>The page you were looking for was moved or doesn't exit.</h2>
+                        <div class="pesan-eror">404</div>
+                        <p class="balik-home"><a href="index.html">Let's get you back</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //error -->
+    </div>
+
+    
+    {% endblock %}
+
+

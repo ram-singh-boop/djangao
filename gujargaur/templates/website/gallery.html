@@ -1,0 +1,60 @@
+
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <!-- inner banner -->
+    <section class="w3l-inner-banner-main">
+        <div class="about-inner inner2">
+            <div class="wrapper seen-w3">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="{%url 'website-home' %}">Home</a></li>
+                    <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+                    <li class="active">Gallery</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+  
+    <!-- gallery -->
+   <!-- gallery -->
+    <section class="w3l-gallery-main">
+        <div class="gallery sec-padding">
+            <div class="wrapper">
+                <h3 class="title-main">Our Gallery</h3>
+
+                <div class="d-grid gallery-w3lsrow">
+                   {% for item in gallerybulk.galley_image %}
+                    <div class="gallery-grids">
+                        <div class="w3ls-hover">
+
+                            <a href="{{ item.image.url }}" data-lightbox="example-set"
+                                data-title="{{ item.description }} ">
+                                <img src="{{ item.image.url }}" class="img-responsive zoom-img" alt="" />
+                                <div class="view-caption">
+                                    <h5>Latest Gallery</h5>
+                                    <span class="fa fa-search-plus"></span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+                <script src="{% static 'website/js/jquery-2.2.3.min.js' %}"></script>
+                <!--  light box js -->
+                <script src="{% static 'website/js/lightbox-plus-jquery.min.js' %}"> </script>
+                <!-- //light box js-->
+            </div>
+        </div>
+    </section>
+    <!-- //gallery -->
+    <!-- //gallery -->
+  
+
+
+
+
+{% endblock %}

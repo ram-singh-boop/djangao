@@ -1,0 +1,118 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+    <!-- inner banner -->
+    <section class="w3l-inner-banner-main">
+        <div class="about-inner inner2">
+            <div class="wrapper seen-w3">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="{%url 'website-home' %}">Home</a></li>
+                    <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+                    <li class="active">Search Result Page</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+    <div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+        <!---728x90--->
+
+    </div>
+    <!-- search results 1 -->
+    <section class="w3l-search-results-1-main">
+        <div class="search-results-1">
+            <div class="search-results-top">
+                <div class="wrapper">
+                    <div class="search-results-form">
+                        <form action="#" method="post" class="d-flex">
+                            <input type="search" name="text" placeholder="Type your keyword..." required="">
+                            <button type="submit" class="btn button-eff">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="search-results-bottom">
+                <div class="wrapper">
+                    <div class="search-grids">
+                        <h5>Search results found: 7</h5>
+                        <span class="horizontal-line"></span>
+                        <div class="main-grid d-grid">
+                            <div class="left-content-search">
+                                <img src="{% static 'website/images/service2.jpg' %}" alt="" class="img-fluid img-responsive" />
+                            </div>
+                            <div class="search-grid-1 search-grid-2">
+                                <h4>Unity beatae facere explicabo quidem rerum</h4>
+                                <a href="#link" class="search-link">Search-link_here/design.search-result-found/</a>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae facere explicabo
+                                    quidem
+                                    rerum, sunt sit.</p>
+                            </div>
+                        </div>
+                        <div class="main-grid d-grid">
+                            <div class="left-content-search">
+                                <img src="assets/images/service1.jpg" alt="" class="img-fluid img-responsive" />
+                            </div>
+                            <div class="search-grid-1 search-grid-2">
+                                <h4>Some features that made us Unique - Unity</h4>
+                                <a href="#link" class="search-link">Search-link_here/design.search-result-found/</a>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae facere explicabo
+                                    quidem
+                                    rerum, sunt sit optio est ipsa.</p>
+                            </div>
+                        </div>
+                        <div class="main-grid d-grid">
+                            <div class="left-content-search">
+                                <img src="assets/images/service5.jpg" alt="" class="img-fluid img-responsive" />
+                            </div>
+                            <div class="search-grid-1 search-grid-2">
+                                <h4>Community Affordable solutions for better....</h4>
+                                <a href="#link" class="search-link">Search-link_here/design.search-result-found/</a>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aspernatur
+                                    consectetur
+                                    mollitia iste suscipit.</p>
+                            </div>
+                        </div>
+                        <div class="search-grid-1">
+                            <h4>Et accusamus et iusto odio dignissimos ducimus</h4>
+                            <a href="#link" class="search-link">Search-link_here/design.search-result-found/</a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aspernatur consectetur
+                                mollitia iste suscipit vel. Beatae facere explicabo quidem rerum, sunt sit, optio est
+                                ipsa
+                                impedit autem.</p>
+                        </div>
+                        <div class="search-grid-1">
+                            <h4>Totam rem aperiam, eaque ipsa quae ab illo inventore</h4>
+                            <a href="#link" class="search-link">Search-link_here/design.search-result-found/</a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aspernatur consectetur
+                                mollitia iste suscipit vel. Beatae facere explicabo quidem rerum, sunt sit, optio est
+                                ipsa
+                                impedit autem.</p>
+                        </div>
+                        <div class="search-grid-1">
+                            <h4>Sit voluptatem accusantium doloremque laudantium</h4>
+                            <a href="#link" class="search-link">Search-link_here/design.search-result-found/</a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aspernatur consectetur
+                                mollitia iste suscipit vel. Beatae facere explicabo quidem rerum, sunt sit, optio est
+                                ipsa
+                                impedit autem.</p>
+                        </div>
+                        <div class="search-grid-1">
+                            <h4>Sed ut perspiciatis unde omnis iste natus error...</h4>
+                            <a href="#link" class="search-link">Search-link_here/design.search-result-found/</a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aspernatur consectetur
+                                mollitia iste suscipit vel. Beatae facere explicabo quidem rerum, sunt sit, optio est
+                                ipsa
+                                impedit autem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {% endblock %}

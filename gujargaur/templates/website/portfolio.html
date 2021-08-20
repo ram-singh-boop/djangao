@@ -1,0 +1,121 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <!-- inner banner -->
+    <section class="w3l-inner-banner-main">
+        <div class="about-inner inner2">
+            <div class="wrapper seen-w3">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="{%url 'website-home' %}">Home</a></li>
+                    <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+                    <li class="active">Portfolio</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+ 
+    <!-- portfolio -->
+    <section class="w3l-gallery-main" id="portfolio">
+        <div class="gallery sec-padding">
+            <div class="wrapper">
+                <h3 class="title-main">Our Portfolio</h3>
+                <div class="d-grid portfolio-page">
+                    <div class="gallery-grids">
+                        <div class="w3ls-hover">
+                            <a href="single.html">
+                                <img src="{% static 'website/images/service4.jpg' %}" class="img-responsive zoom-img" alt="" />
+                                <div class="view-caption">
+                                    <h5>Portfolio</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-grids">
+                        <div class="w3ls-hover">
+                            <a href="single.html">
+                                <img src="{% static 'website/images/portfolio1.jpg' %}" class="img-responsive zoom-img" alt="" />
+                                <div class="view-caption">
+                                    <h5>Portfolio</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-grids">
+                        <div class="w3ls-hover">
+                            <a href="single.html">
+                                <img src="{% static 'website/images/service6.jpg' %}" class="img-responsive zoom-img" alt="" />
+                                <div class="view-caption">
+                                    <h5>Portfolio</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid portfolio-page-2">
+                    <div class="gallery-grids">
+                        <div class="w3ls-hover">
+                            <a href="single.html">
+                                <img src="{% static 'website/images/portfolio4.jpg' %}" class="img-responsive zoom-img" alt="" />
+                                <div class="view-caption">
+                                    <h5>Portfolio</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-grids">
+                        <div class="w3ls-hover">
+                            <a href="single.html">
+                                <img src="{% static 'website/images/portfolio3.jpg' %}" class="img-responsive zoom-img" alt="" />
+                                <div class="view-caption">
+                                    <h5>Portfolio</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid portfolio-page">
+                    <div class="gallery-grids">
+                        <div class="w3ls-hover">
+                            <a href="single.html">
+                                <img src="{% static 'website/images/portfolio2.jpg' %}" class="img-responsive zoom-img" alt="" />
+                                <div class="view-caption">
+                                    <h5>Portfolio</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-grids">
+                        <div class="w3ls-hover">
+                            <a href="single.html">
+                                <img src="{% static 'website/images/service5.jpg' %}" class="img-responsive zoom-img" alt="" />
+                                <div class="view-caption">
+                                    <h5>Portfolio</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-grids">
+                        <div class="w3ls-hover">
+                            <a href="single.html">
+                                <img src="{% static 'website/images/portfolio5.jpg' %}" class="img-responsive zoom-img" alt="" />
+                                <div class="view-caption">
+                                    <h5>Portfolio</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //portfolio -->
+ 
+  
+
+
+    {% endblock %}
+

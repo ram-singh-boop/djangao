@@ -1,0 +1,228 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+ 
+    <!-- inner banner -->
+    <section class="w3l-inner-banner-main">
+        <div class="about-inner inner2">
+            <div class="wrapper seen-w3">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="{% url 'website-home' %}">Home</a></li>
+                    <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+                    <li class="active">About Page</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+    <!-- text-new -->
+    <section class="w3l-text-new-main">
+        <div class="text-sub-ab">
+            <div class="wrapper">
+                <div class="sub-content">
+                    {% for item in context.top_content %}
+                        <h6 class="para-about">{{ item.description }}
+                    {% endfor %}
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //text-new -->
+    <!-- text-6 -->
+    <section class="w3l-text-6" id="about">
+        <div class="text-6-mian">
+            <div class="wrapper">
+                <div class="d-grid top-cont-grid">
+                    <div class="left-img">
+
+
+                            <img src="{{ context.welcome_to_our_image }}" alt="" class="img-fluid img-responsive" />
+
+
+                    </div>
+
+                    <div class="text-6-info">
+                        {% for item in context.welcome_to_our %}
+
+                         <h6>{{ item.subtitle }}</h6>
+                        <h2>{{ item.title }}  </h2>
+                        <p>{{ item.description }}</p>
+                        <a href="about.html" class="btn button-eff"> Read More </a>
+
+
+                    {% endfor %}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //text-6 -->
+    <div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+		<!---728x90--->
+
+	</div>
+    <!-- specifications -->
+    <section class="w3l-specifications-9" id="stats">
+        <div class="main-w3">
+            <div class="overlay">
+                <div class="wrapper">
+                    <div class="counting-top">
+
+                          {% for item in context.why_we_are_unique %}
+                        <h4 class="text-mu">{{ item.title }} </h4>
+                        <p class="sub-counting">{{ item.description }}</p>
+
+                    {% endfor %}
+
+                    </div>
+
+                    <div class="d-flex main-cont-wthree-fea">
+                        <div class="grids-speci">
+                            <div class="stats-icon">
+                                <span class="fa fa-smile-o" aria-hidden="true"></span>
+                            </div>
+                            <div>
+                                <h3 class="title-spe">5,100</h3>
+                                <p>Happy People</p>
+                            </div>
+                        </div>
+                        <div class="grids-speci">
+                            <div class="stats-icon">
+                                <span class="fa fa-users" aria-hidden="true"></span>
+                            </div>
+                            <div>
+                                <h3 class="title-spe">971</h3>
+                                <p>Register User</p>
+                            </div>
+                        </div>
+                        <div class="grids-speci">
+                            <div class="stats-icon">
+                                <span class="fa fa-building-o" aria-hidden="true"></span>
+                            </div>
+                            <div>
+                                <h3 class="title-spe">21</h3>
+                                <p>Branches</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //specifications -->
+    <div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+		<!---728x90--->
+
+	</div>
+    <!-- contentwithphoto-11 -->
+    <section class="w3l-content-with-photo-11">
+        <div class="content-photo-11">
+            <div class="wrapper">
+                <div class="contentwithphoto-11-content">
+                    <div class="column contentwithphoto-img">
+
+                            <img src="{{ context.why_us_image }}" alt="images" class="img-fluid img-responsive" />
+
+                    </div>
+                    <div class="column contentwithphoto-text">
+                        <h3 class="title-main-2">Why Choose Us?</h3>
+                        <div class="contentwithphoto-text-info">
+                            {% for item in context.why_us %}
+                            <div class="column">
+                                <h4><a href="single.html">{{ item.title }}</a></h4>
+                                <p>{{ item.description }}
+                                </p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //contentwithphoto-11 -->
+    <div class="w3l-cutomer-main-cont" id="customer">
+        <!-- testimonials -->
+        <div class="testimonials text-center sec-padding">
+            <div class="wrapper">
+                <h3 class="title-main">Customers Say</h3>
+                <div class="d-grid content-sec">
+
+
+                    {% for item in context.customerssay %}
+
+                            <div class="testi-sections">
+                        <div class="testimonials_grid">
+                            <p class="sub-test"><span class="fa fa-quote-left mr-2" aria-hidden="true"></span>
+                                {{ item.description }}
+                            </p>
+                            <div class="d-grid sub-author-con">
+                                <div class="testi-img-res">
+                                    <img src="{{ item.image.url }}" alt="" class="img-responsive" />
+                                </div>
+                                <div class="testi_grid text-left">
+                                    <h5 class="mb-1">{{ item.title }}</h5>
+                                    <p>{{ item.subtitle }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                            {% endfor %}
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- //testimonials -->
+    </div>
+    <div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+		<!---728x90--->
+
+	</div>
+    <!-- app-4 -->
+    <section class="w3l-app-launch-4" id="app">
+        <div id="app4-block">
+            <div class="wrapper">
+                <div class="d-grid parent-flex">
+                    <div class="app4-right-image">
+                        <img src="{{ context.get_a_free_mobile_app_image }}" class="img-responsive" alt="App Device" />
+                    </div>
+                    <div class="app4-left-text">
+                        {% for item  in  context.get_a_free_mobile_app %}
+                        <h6>{{ item.subtitle }}</h6>
+                        <h4 class="hny-title">{{ item.title }} </h4>
+                        <p> {{ item.description }} </p>
+                           {% endfor %}
+                        <div class="app-4-connection">
+                            <div class="newsletter">
+                                <label>Enter email address to get download link</label>
+                                <form action="#" methos="GET" class="d-flex wrap-align">
+                                    <input type="email" placeholder="Enter email" required="required" />
+                                    <button type="submit">Get link</button>
+                                </form>
+                            </div>
+                            <div class="app-4-icon">
+                                <ul>
+                                    <li><a href="#url" title="Apple" class="app-icon apple-vv"><span class="fa fa-apple"
+                                                aria-hidden="true"></span></a></li>
+                                    <li><a href="#url" title="Google play" class="app-icon play-vv"><span
+                                                class="fa fa-play" aria-hidden="true"></span></a></li>
+                                    <li><a href="#url" title="Microsoft" class="app-icon windows-vv"><span
+                                                class="fa fa-windows" aria-hidden="true"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //app-4 -->
+
+    {% endblock %}

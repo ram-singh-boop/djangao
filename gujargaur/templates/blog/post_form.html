@@ -1,0 +1,117 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+
+<!-- inner banner -->
+  <section class="w3l-inner-banner-main">
+    <div class="about-inner inner2">
+      <div class="wrapper seen-w3">
+        <ul class="breadcrumbs-custom-path">
+          <li><a href="{% url 'website-home' %}">Home</a></li>
+          <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+          <li class="active">Blog Page</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- //inner banner -->
+
+ <section class="w3l-blog-single">
+    <div class="single blog sec-padding">
+      <div class="wrapper">
+
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+
+                <h3 class="border-bottom mt-4">Add New Blog Post</h3>
+            <br>
+                {{ form|crispy }}
+
+            <div class="from-group mt-3">
+                <button class="btn btn-outline-info" type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+
+          </div>   </div>   </section>
+
+<div class="clear">
+
+
+<style>
+.card.shadow-sm {
+    width: 50%;
+    float: left;
+}
+.clear {
+    clear: both;
+}
+
+.btn.btn-sm.btn-outline-secondary {
+    background: #ff4c4c;
+    border: navajowhite;
+       margin-bottom: 11px;
+       padding: 10px;
+}
+
+.btn.btn-sm.btn-outline-secondary a {
+    color: #fff;
+
+}
+
+.w3l-blog-single .card-body, .w3l-blog-single .floods-text {
+    padding: 0;
+}
+
+.w3l-blog-single .card {
+
+    border: none;
+}
+.card-body h3 {
+    margin: 7px 0;
+}
+.card.shadow-sm {
+    width: 48%;
+    float: left;
+    margin: 10px;
+}
+.d-flex.justify-content-between.align-items-center {
+    margin-top: 9px;
+}
+.btn.btn-sm.btn-outline-info {
+    background: #ff4c4c;
+    border: none;
+    margin-right: 10px;
+}
+.btn.btn-sm.btn-outline-info a, .btn.btn-outline-info a {
+    color: #fff;
+}
+
+.text-muted {
+    font-size: 18px;
+}
+
+.controls input, textarea {
+    border: 1px solid #ddd;
+    width: 100%;
+    border-radius: 6px;
+    padding: 9px;
+    margin-bottom: 13px;
+}
+
+.btn.btn-outline-info {
+    background: #ff4c4c;
+    border: navajowhite;
+    margin-bottom: 11px;
+    padding: 10px;
+    margin-top: 11px;
+    color: #fff;
+}
+
+</style>
+
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends "website/base.html" %}
+ {% load static %}
+{% block content %}
+
+<!-- inner banner -->
+  <section class="w3l-inner-banner-main">
+    <div class="about-inner inner2">
+      <div class="wrapper seen-w3">
+        <ul class="breadcrumbs-custom-path">
+          <li><a href="{% url 'website-home' %}">Home</a></li>
+          <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+          <li class="active">Blog Page</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- //inner banner -->
+
+ <section class="w3l-blog-single">
+    <div class="single blog sec-padding">
+      <div class="wrapper">
+
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+
+                <legend class="border-bottom mt-4">Delete Post</legend>
+                <h2>Are you sure you want to delete the post: "{{ object.title }}"</h2>
+
+            <div class="from-group mt-3">
+                <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
+                <a class="btn btn-outline-secondary" href="{% url 'post-detail' object.id %}">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+</div>   </div>   </section>
+
+<div class="clear">
+<style>
+
+.content-section {
+    text-align: center;
+}
+.card.shadow-sm {
+    width: 50%;
+    float: left;
+}
+.clear {
+    clear: both;
+}
+
+.btn.btn-sm.btn-outline-secondary {
+    background: #ff4c4c;
+    border: navajowhite;
+       margin-bottom: 11px;
+       padding: 10px;
+}
+
+.btn.btn-sm.btn-outline-secondary a {
+    color: #fff;
+
+}
+
+.w3l-blog-single .card-body, .w3l-blog-single .floods-text {
+    padding: 0;
+}
+
+.w3l-blog-single .card {
+
+    border: none;
+}
+.card-body h3 {
+    margin: 7px 0;
+}
+.card.shadow-sm {
+    width: 48%;
+    float: left;
+    margin: 10px;
+}
+.d-flex.justify-content-between.align-items-center {
+    margin-top: 9px;
+}
+.btn.btn-sm.btn-outline-info {
+    background: #ff4c4c;
+    border: none;
+    margin-right: 10px;
+}
+.btn.btn-sm.btn-outline-info a, .btn.btn-outline-danger a {
+    color: #fff;
+}
+
+.text-muted {
+    font-size: 18px;
+}
+
+.btn.btn-outline-danger {
+    background: #ff4c4c;
+    border: navajowhite;
+    margin-bottom: 11px;
+    padding: 10px;
+    margin-top: 10px;
+        color: #fff;
+}
+
+
+.btn.btn-outline-secondary {
+    background: #000;
+    border: navajowhite;
+    margin-bottom: 11px;
+    padding: 10px;
+        color: #fff;
+        font-size: 13px;
+}
+
+
+</style>
+{% endblock %}

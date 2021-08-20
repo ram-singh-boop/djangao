@@ -1,0 +1,78 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+    <!-- inner banner -->
+    <section class="w3l-inner-banner-main">
+        <div class="about-inner inner2">
+            <div class="wrapper seen-w3">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="{% url 'website-home' %}">Home</a></li>
+                    <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+                    <li class="active">Contact Page</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+  
+    <!-- contact -->
+    <section class="w3l-contact-info-main" id="contact">
+        <div class="contact-sec sec-padding">
+            <div class="wrapper">
+                <h3 class="title-main">Contact Us</h3>
+                <div class="contact-w3pvt-form">
+                    <p class="sub-wthree">
+                         {% for item in contactpage.contact_heading %}
+                   {{ item.description }}
+
+                    {% endfor %}
+                        </p>
+                    <form method="post" class="w3layouts-contact-fm" action="https://sendmail.w3layouts.com/submitForm">
+                        <div class="d-grid main-cont-sec">
+                            <div class="left-cont-contact">
+                                <div class="form-group">
+                                    <label for="w3lName">First Name</label>
+                                    <input class="form-control" type="text" name="w3lName" id="w3lName" placeholder=""
+                                        required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="w3lName">Last Name</label>
+                                    <input class="form-control" type="text" name="w3lName" id="w3lName" placeholder=""
+                                        required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="w3lSender">Email</label>
+                                    <input class="form-control" type="email" name="w3lSender" id="w3lSender"
+                                        placeholder="" required="">
+                                </div>
+                            </div>
+                            <div class="right-cont-contact">
+                                <div class="form-group">
+                                    <label for="w3lSubject">Write Message</label>
+                                    <textarea class="form-control" name="w3lMessage" id="w3lMessage" placeholder=""
+                                        required=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group-2">
+                            <button type="submit" class="btn button-eff">Send Now</button>
+                        </div>
+                    </form>
+                    <br>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d114269.65633433932!2d74.48824698560564!3d26.490302909626397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1622629746483!5m2!1sen!2sin" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+      {% endblock %}
+  
+
+
+
